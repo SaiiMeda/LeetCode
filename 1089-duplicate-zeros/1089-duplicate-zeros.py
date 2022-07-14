@@ -7,7 +7,7 @@ class Solution:
                 arr[i] = queue_1.pop(0)
             elif arr[i] == 0:
                 queue_1.append(0)
-                queue_1.append(0)
+                queue_1.append(0) 
                 arr[i] = queue_1.pop(0)
                 
                 
