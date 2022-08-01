@@ -1,23 +1,14 @@
 class Solution:
     def validMountainArray(self, arr: List[int]) -> bool:
-        up = True
-        if len(arr) == 2:
+        if len(arr) < 3:
             return False
-        for i in range(1,len(arr)):
-                
-            if arr[i-1] == arr[i]:
-                return False
-            if up:
-                if arr[i - 1] > arr[i]:
-                    up = False
-            else:
-                if i == 2:
-                    return False
-                if arr[i - 1] < arr[i]:
-                    return False
-        if up:
-            return False
-        return True
+        l = 0 
+        r = len(arr) - 1
+        while l + 1 < len(arr) - 1 and arr[l] < arr[l+1]:
+            l +=1
+        while r - 1 > 0 and arr[r] < arr[r-1]:
+            r -=1
+        return l == r
                 
             
         
