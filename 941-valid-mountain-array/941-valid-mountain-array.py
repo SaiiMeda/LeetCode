@@ -8,6 +8,7 @@ class Solution:
             l +=1
         while r - 1 > 0 and arr[r] < arr[r-1]:
             r -=1
+        # Find the peak from left and right, if they're equal then it's a mountain!
         return l == r
                 
             
